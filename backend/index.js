@@ -9,25 +9,25 @@ dbconnect();
 
 
 
-// app.use((req,res,next)=>{
-//     res.setHeader("Acess-Control-Allow-Origin", "http://localhost:3000");
-//     res.header(
-//         "Access-Control-Allow-Headers",
-//         "Origin, X-Requested-With, Content-Type, Accept"
-//     );
+app.use((req,res,next)=>{
+    res.setHeader("Acess-Control-Allow-Origin", "http://localhost:3000");
+    res.header(
+        "Access-Control-Allow-Headers",
+        "Origin, X-Requested-With, Content-Type, Accept"
+    );
 
-//     next();
-// })
+    next();
+})
 
 
-app.use(cors({
+// app.use(cors({
 
-    origin: ["https://gofood-1whq.vercel.app"], 
-    methods: ["POST", "GET"],
-    credentials: true
+//     origin: ["https://gofood-1whq.vercel.app"], 
+//     methods: ["POST", "GET"],
+//     credentials: true
     
-}));
-// app.use(cors());
+// }));
+ app.use(cors());
 
 
 app.get('/', (req,res)=>{
