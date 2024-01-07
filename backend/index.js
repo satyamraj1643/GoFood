@@ -27,6 +27,7 @@ app.use(cors({
     credentials: true
     
 }));
+// app.use(cors());
 
 
 app.get('/', (req,res)=>{

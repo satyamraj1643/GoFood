@@ -19,7 +19,7 @@ router.get('/' , async(req,res)=>{
 
 
 
-      const data = await fetched_data.find().toArray();
+      const data = await fetched_data.find({}).toArray();
 
       res.json({status:'success', FoodCategory: data});
         
