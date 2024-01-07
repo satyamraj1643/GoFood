@@ -30,7 +30,7 @@ app.use(cors({
 
 
 app.get('/', (req,res)=>{
-    res.send("Hello React!");
+    res.send("Hello React! Deployed from vercel.");
 })
 
  app.use(express.json());
