@@ -4,7 +4,7 @@ const app = express();
 const cors = require('cors');
 
 
-const {PORT} = require('./backendPORT.js')
+const PORT = 5000;
 dbconnect();
 
 
