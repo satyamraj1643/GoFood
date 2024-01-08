@@ -11,7 +11,7 @@ dbconnect();
 
 
 app.use((req,res,next)=>{
-    res.setHeader("Acess-Control-Allow-Origin", "http://localhost");
+    res.setHeader("Acess-Control-Allow-Origin", "http://localhost:80");
     res.header(
         "Access-Control-Allow-Headers",
         "Origin, X-Requested-With, Content-Type, Accept"
