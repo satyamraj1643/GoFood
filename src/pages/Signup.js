@@ -208,7 +208,7 @@ function Signup() {
 
         try {
 
-            const response = await fetch(`http://localhost:5000/api/createuser`, {
+            const response = await fetch(`http://13.232.155.252:5000/api/createuser`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
