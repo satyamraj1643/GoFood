@@ -32,7 +32,7 @@ app.use((req,res,next)=>{
 
 
 app.get('/', (req,res)=>{
-    res.send("Hello React! Deployed from vercel.");
+    res.send("Hello React! Deployed from AWS.");
 })
 
  app.use(express.json());
