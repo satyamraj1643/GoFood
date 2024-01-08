@@ -28,7 +28,7 @@ app.use((req,res,next)=>{
 //     credentials: true
     
 // }));
- //app.use(cors());
+ app.use(cors());
 
 
 app.get('/', (req,res)=>{
