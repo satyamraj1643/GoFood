@@ -38,7 +38,7 @@ function DisplayData() {
 
   const CategoryFetchHandler = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/fetchcategory');
+      const response = await fetch('http://13.232.155.252:5000/api/fetchcategory');
 
       if (!response.ok) {
         throw new Error('Failed to fetch data');
