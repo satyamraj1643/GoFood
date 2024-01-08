@@ -10,15 +10,15 @@ dbconnect();
 
 
 
-app.use((req,res,next)=>{
-    res.setHeader("Acess-Control-Allow-Origin", "http://localhost:80");
-    res.header(
-        "Access-Control-Allow-Headers",
-        "Origin, X-Requested-With, Content-Type, Accept"
-    );
+// app.use((req,res,next)=>{
+//     res.setHeader("Acess-Control-Allow-Origin", "http://localhost:80");
+//     res.header(
+//         "Access-Control-Allow-Headers",
+//         "Origin, X-Requested-With, Content-Type, Accept"
+//     );
 
-    next();
-})
+//     next();
+// })
 
 
 // app.use(cors({
@@ -28,7 +28,17 @@ app.use((req,res,next)=>{
 //     credentials: true
     
 // }));
- app.use(cors());
+const allowedOrigins = ['http://13.232.155.252'];
+
+app.use(cors({
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+}));
 
 
 app.get('/', (req,res)=>{
