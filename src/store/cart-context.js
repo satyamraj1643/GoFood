@@ -38,8 +38,8 @@ export const CartContextProvider = (props) => {
 
         CartItems[alreadyPresentIndex] = updatedItem;
 
-        const updatedQuantity= updatedItem.quantity;
-        const updatedAmount = updatedItem.thisAmount
+        // const updatedQuantity= updatedItem.quantity;
+        // const updatedAmount = updatedItem.thisAmount
         
 
 

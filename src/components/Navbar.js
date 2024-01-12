@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import AuthContext from '../store/auth-context';
 import CartContext from '../store/cart-context';
 
+
 function Navbar() {
   const authCtx = useContext(AuthContext);
   const isLoggedIn = authCtx.isLoggedIn;
@@ -32,7 +33,9 @@ function Navbar() {
     <>
       <nav className="navbar navbar-expand-lg navbar-dark bg-success">
         <div className="container-fluid">
+       
           <Link className="navbar-brand fs-1 fst-italic" to="/">
+           
             GoFood
           </Link>
           <button
