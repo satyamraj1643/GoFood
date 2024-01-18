@@ -208,7 +208,7 @@ function Signup() {
 
         try {
 
-            const response = await fetch("https://gofood-api.onrender.com/api/createuser", {
+            const response = await fetch("https://gofood-api-1640.onrender.com/api/createuser", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
