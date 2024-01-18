@@ -72,12 +72,6 @@ export const CartContextProvider = (props) => {
       setTotalItems((prev)=> (prev + (+Itemquantity)));
 
      }
-
-
-
-    
-   
-
       
   };
   const removeAllFromCart = () => {

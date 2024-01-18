@@ -23,7 +23,7 @@ function DisplayData() {
 
   const ItemsFetchHandler = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/fetchitems');
+      const response = await fetch('https://gofood-api.onrender.com/api/fetchitems');
 
       if (!response.ok) {
         throw new Error('Failed to fetch data');
@@ -38,7 +38,7 @@ function DisplayData() {
 
   const CategoryFetchHandler = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/fetchcategory');
+      const response = await fetch('https://gofood-api.onrender.com/api/fetchcategory');
 
       if (!response.ok) {
         throw new Error('Failed to fetch data');
