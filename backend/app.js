@@ -28,7 +28,7 @@ dbconnect();
 //     credentials: true
     
 // }));
-const allowedOrigins = ['https://gofood-api.onrender.com'];
+const allowedOrigins = ['https://gofood-wq3s.onrender.com/'];
 
 app.use(cors({
   origin: function (origin, callback) {
