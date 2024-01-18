@@ -38,7 +38,7 @@ function Login() {
     let response = null;
     try {
 
-      response = await fetch('http://3.111.29.8:5000/api/loginuser', {
+      response = await fetch('http://localhost:5000/api/loginuser', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
