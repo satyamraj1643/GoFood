@@ -1,12 +1,12 @@
 const express = require('express');
 
 const router = express.Router();
-const SECRET_KEY = require('./config');
+
 const User = require('../models/User')
 
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken');
-const jwtSecret = SECRET_KEY
+const jwtSecret = process.env.SECRET_KEY
 
 
 router.post('/', async (req,res)=>{
