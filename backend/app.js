@@ -5,20 +5,20 @@ const app = express();
 const cors = require('cors');
 
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT;
 dbconnect();
 
 
 
-app.use((req,res,next)=>{
-    res.setHeader("Acess-Control-Allow-Origin", "http://localhost:5000");
-    res.header(
-        "Access-Control-Allow-Headers",
-        "Origin, X-Requested-With, Content-Type, Accept"
-    );
+// app.use((req,res,next)=>{
+//     res.setHeader("Acess-Control-Allow-Origin", "http://localhost:5000");
+//     res.header(
+//         "Access-Control-Allow-Headers",
+//         "Origin, X-Requested-With, Content-Type, Accept"
+//     );
 
-    next();
-})
+//     next();
+// })
 
 
 // app.use(cors({
@@ -28,22 +28,22 @@ app.use((req,res,next)=>{
 //     credentials: true
     
 // }));
-// const allowedOrigins = ['http://13.232.155.252'];
+const allowedOrigins = ['https://gofood-wq3s.onrender.com'];
 
-// app.use(cors({
-//   origin: function (origin, callback) {
-//     if (!origin || allowedOrigins.includes(origin)) {
-//       callback(null, true);
-//     } else {
-//       callback(new Error('Not allowed by CORS'));
-//     }
-//   },
-// }));
+app.use(cors({
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)!== -1) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+}));
 
 app.use(cors());
 
 app.get('/', (req,res)=>{
-    res.send("Hello React! Deployed from AWS.");
+    res.send("Hello peeps");
 })
 
  app.use(express.json());
