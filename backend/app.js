@@ -28,7 +28,7 @@ dbconnect();
 //     credentials: true
     
 // }));
-const allowedOrigins = ['https://gofood-wq3s.onrender.com/'];
+const allowedOrigins = ['https://gofood-wq3s.onrender.com'];
 
 app.use(cors({
   origin: function (origin, callback) {
@@ -43,7 +43,7 @@ app.use(cors({
 app.use(cors());
 
 app.get('/', (req,res)=>{
-    res.send("Hello React! Deployed from AWS.");
+    res.send("Hello peeps");
 })
 
  app.use(express.json());
