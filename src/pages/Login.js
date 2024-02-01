@@ -38,7 +38,7 @@ function Login() {
     let response = null;
     try {
 
-      response = await fetch('https://gofood-api-1640.onrender.com/api/loginuser', {
+      response = await fetch('https://gofood-backend-421x.onrender.com/api/loginuser', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
